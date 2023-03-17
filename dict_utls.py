@@ -6,7 +6,7 @@ def update_set_val(word_dict: defaultdict, key: str, values: set) -> None:
 
 
 def invert_dict(input_dict: defaultdict) -> dict:
-    output_dict = {}
+    output_dict = defaultdict(set)
     for key, values in input_dict.items():
         for value in values:
             output_dict[value].add(key)
